@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Challenge</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: silver;
+        }
+        .hadding{
+            background-color: black;
+            color: white;
+            width: 500px;
+            margin: 50px auto;
+            border-radius: 30px;
+            border-color: blue;
+            border-style: double;
+
+        }
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid black;
+            background-color: #FFFFFF;
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+        }
+        #colorOptions{
+            border-radius: 30px;
+             width: 250px;
+             height: 50px;
+            margin: 50px auto;
+            border: 2px solid black ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        #colorOptions button{
+            border-radius: 15px;
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            cursor: pointer; 
+        }
+
+        #colorOptions button:hover{
+            background-color: silver;
+        } 
+}
+        p{
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="hadding">
+        <h1>Color Picker Challenge</h1>
+    </div>
+    <p>Select a color from the options below:</p>
+    <!-- HTML for color options -->
+    <div id="colorOptions">
+        <button onclick="changeColor('Red')">Red</button>
+        <button onclick="changeColor('Green')">Green</button>
+        <button onclick="changeColor('blue')">Blue</button>
+    </div>
+    <!-- HTML for color box -->
+    <div id="colorBox"></div>
+    <script>
+        // JavaScript for functionality
+        function changeColor(color) {
+            document.getElementById('colorBox').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
